@@ -31,6 +31,7 @@ const arrayItems = [
 ];
 
 const ulReceiver = document.querySelector('.to-do-list');
+
 arrayItems.forEach((item) => {
   const listItem = `<hr>
   <div class="inner-items"><input class="inner-input" type="checkbox">
