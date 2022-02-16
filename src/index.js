@@ -5,26 +5,36 @@ import './style.css';
 const arrayItems = [
   {
     index: 1,
-    description: 'Go to the market',
+    description: 'Double-tap to edit',
     completed: true,
   },
   {
     index: 2,
-    description: 'Meet my  boss',
-    completed: false,
+    description: 'Drag and drop to re-order',
+    completed: true,
   },
   {
     index: 3,
-    description: 'Clean the house',
+    description: 'Go to the market',
     completed: true,
   },
   {
     index: 4,
+    description: 'Meet my  boss',
+    completed: false,
+  },
+  {
+    index: 5,
+    description: 'Clean the house',
+    completed: true,
+  },
+  {
+    index: 6,
     description: 'Drop the kids to school',
     completed: true,
   },
   {
-    index: 5,
+    index: 7,
     description: 'Pick the kids from school',
     completed: false,
   },
