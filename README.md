@@ -9,8 +9,8 @@ This is a to do list implemented using webpack
 
 ## Screenshot
 
-<!-- ![screenshot](./images/a.png)
-![screenshot](./images/b.png)
+![screenshot](./src/images/Screenshot.png)
+<!-- ![screenshot](./images/b.png)
 ![screenshot](./images/c.png) -->
 
 ## Built With
