@@ -31,9 +31,6 @@ const arrayItems = [
 ];
 
 const ulReceiver = document.querySelector('.to-do-list');
-
-// ulReceiver.sort((a, b) => (a.index > b.index ? 1 : -1));
-
 arrayItems.forEach((item) => {
   const listItem = `<hr>
   <div class="inner-items"><input class="inner-input" type="checkbox">
@@ -43,7 +40,6 @@ arrayItems.forEach((item) => {
   <i class="bi bi-trash"></i>
   </button>
   </div>`;
-
   ulReceiver.innerHTML += listItem;
 });
 
