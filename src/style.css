@@ -1,5 +1,107 @@
-/* stylelint-disable indentation */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 body {
-    background-color: bisque;
-/* stylelint-disable-next-line no-missing-end-of-source-newline */
+  text-align: center;
+  margin: 0;
+}
+
+hr {
+  width: 100%;
+  margin: 0;
+}
+
+.to-do-container {
+  margin: 10px auto;
+  width: 40%;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px 10px #888;
+}
+
+.to-do-container h1 {
+  text-align: left;
+  margin-left: 40px;
+  padding: 20px 0;
+}
+
+.form-input {
+  text-align: left;
+  margin: 20px 40px 0;
+  height: 80px;
+  width: 70%;
+  font-size: x-large;
+  padding: 0;
+  border: 0;
+  border: none;
+  outline: none;
+  font-style: italic;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.to-do-container ul {
+  list-style: none;
+  text-align: left;
+  margin: 10px 0 0;
+  padding: 10px;
+}
+
+.items {
+  margin: 30px;
+  font-size: x-large;
+  font-weight: 800;
+  min-width: 30vw;
+}
+
+.clr-btn {
+  width: 100%;
+  height: 70px;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.inner-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inner-input {
+  width: 25px;
+  height: 25px;
+}
+
+.item-img {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+}
+
+.btn-refresh {
+  margin-right: 1.5vw;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+}
+
+.bi-trash {
+  display: none;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strike-through {
+  text-decoration: line-through;
+  font-style: italic;
+  color: rgb(28, 28, 77);
 }
