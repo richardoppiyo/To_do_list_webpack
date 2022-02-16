@@ -1,12 +1,8 @@
-/* stylelint-disable declaration-block-semicolon-newline-after */
-/* stylelint-disable no-eol-whitespace */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-/* stylelint-disable indentation */
 body {
     text-align: center;
     margin: 0;
-/* stylelint-disable-next-line no-missing-end-of-source-newline */
 }
 
 hr {
@@ -109,5 +105,4 @@ height: 25px;
     text-decoration: line-through;
     font-style: italic;
     color: rgb(28, 28, 77);
-/* stylelint-disable-next-line no-missing-end-of-source-newline */
 }
