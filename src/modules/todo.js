@@ -1,5 +1,5 @@
-import { myInput, todoList } from './elements.js';
-import appendTodoList from './appendToDoList.js';
+import { descInput, todoList } from './elements.js';
+import appendTodoList from './appendToDo.js';
 
 class TODO {
   constructor() {
@@ -11,8 +11,8 @@ class TODO {
 
   addTodo() {
     this.todos = this.readTodo();
-    this.description = myInput.value;
-    this.index = this.todos.length + 1;
+    this.description = descInput.value;
+    this.index = this.todos.length;
     this.todos.push({
       index: this.index,
       description: this.description,

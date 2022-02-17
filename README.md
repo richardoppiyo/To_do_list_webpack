@@ -6,7 +6,7 @@
 
 ## Screenshot
 
-![screenshot](./src/images/Screenshot.png)
+![screenshot](./Screenshot.png)
 <!-- ![screenshot](./images/b.png)
 ![screenshot](./images/c.png) -->
 

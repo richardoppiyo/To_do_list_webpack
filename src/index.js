@@ -1,8 +1,8 @@
 import './style.css';
-import TODO from './modules/todoList.js';
+import TODO from './modules/todo.js';
 import {
-  myInput,
-  cleared,
+  descInput,
+  clearCompleted,
   statusInput,
   editButton,
   deleteButton,
@@ -14,22 +14,18 @@ const newTodo = new TODO();
 
 newTodo.renderPage();
 
-myInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter' && myInput.value !== '') {
+descInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter' && descInput.value !== '') {
     newTodo.addTodo();
-    console.log(newTodo);
     e.preventDefault();
     form.reset();
   }
 });
 
-cleared.addEventListener('click', () => {
+clearCompleted.addEventListener('click', () => {
   newTodo.clearCompleted();
 });
 
-cleared.addEventListener('click', () => {
-  newTodo.clearCompleted();
-});
 for (let i = 0; i < statusInput.length; i += 1) {
   statusInput[i].addEventListener('change', (ev) => {
     newTodo.changeStatus(ev.target.id, ev.target.checked);

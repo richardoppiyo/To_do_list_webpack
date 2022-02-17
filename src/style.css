@@ -84,7 +84,7 @@ body {
 }
 
 .description {
-  padding-left: 2rem;
+  padding-left: 0.4rem;
   font-size: 1.5rem;
 }
 
@@ -115,4 +115,8 @@ body {
 
 .row-bg {
   background: rgb(226, 223, 197);
+}
+
+.status {
+  margin-right: 30px;
 }
