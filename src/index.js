@@ -1,53 +1,94 @@
 import './style.css';
+import TODO from './modules/todoList.js';
+import {
+  myInput,
+  cleared,
+  statusInput,
+  editButton,
+  deleteButton,
+  form,
+  refreshButton,
+} from './modules/elements.js';
 
-const arrayItems = [
-  {
-    index: 1,
-    description: 'Double-tap to edit',
-    completed: true,
-  },
-  {
-    index: 2,
-    description: 'Drag and drop to re-order',
-    completed: true,
-  },
-  {
-    index: 3,
-    description: 'Go to the market',
-    completed: true,
-  },
-  {
-    index: 4,
-    description: 'Meet my  boss',
-    completed: false,
-  },
-  {
-    index: 5,
-    description: 'Clean the house',
-    completed: true,
-  },
-  {
-    index: 6,
-    description: 'Drop the kids to school',
-    completed: true,
-  },
-  {
-    index: 7,
-    description: 'Pick the kids from school',
-    completed: false,
-  },
-];
+const newTodo = new TODO();
 
-const ulReceiver = document.querySelector('.to-do-list');
+newTodo.renderPage();
 
-arrayItems.forEach((item) => {
-  const listItem = `<hr>
-  <div class="inner-items"><input class="inner-input" type="checkbox">
-  <li class="items">${item.description}</li>
-  <button class="item-img">
-  <i class="bi bi-three-dots-vertical"></i>
-  <i class="bi bi-trash"></i>
-  </button>
-  </div>`;
-  ulReceiver.innerHTML += listItem;
+myInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter' && myInput.value !== '') {
+    newTodo.addTodo();
+    console.log(newTodo);
+    e.preventDefault();
+    form.reset();
+  }
 });
+
+cleared.addEventListener('click', () => {
+  newTodo.clearCompleted();
+});
+
+cleared.addEventListener('click', () => {
+  newTodo.clearCompleted();
+});
+for (let i = 0; i < statusInput.length; i += 1) {
+  statusInput[i].addEventListener('change', (ev) => {
+    newTodo.changeStatus(ev.target.id, ev.target.checked);
+    const { parentNode } = ev.target;
+    parentNode.querySelector('.description').classList.toggle('strike-through');
+  });
+}
+
+for (let i = 0; i < editButton.length; i += 1) {
+  editButton[i].addEventListener('click', (event) => {
+    const { parentNode } = event.target.parentNode;
+    const deleteButton = parentNode.getElementsByClassName('btn-delete')[0];
+    const desc = parentNode.querySelector('.description');
+    desc.contentEditable = true;
+    editButton[i].style.display = 'none';
+    deleteButton.style.display = 'block';
+  });
+}
+
+const description = document.querySelectorAll('.description');
+
+description.forEach((element) => {
+  if (element.contentEditable) {
+    element.classList.add('editable');
+    const { id } = element.parentNode.querySelector('.status');
+    let { innerText: val } = element.parentNode.querySelector('.status');
+
+    element.addEventListener('input', () => {
+      val = element.innerText;
+
+      setTimeout(() => {
+        newTodo.updateDescription(val, id);
+        element.contentEditable = false;
+      }, 10000);
+    });
+
+    element.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        element.contentEditable = false;
+        val = val.substring(0, val.length - 1);
+        newTodo.updateDescription(val, id);
+      }
+    });
+  }
+});
+
+for (let i = 0; i < deleteButton.length; i += 1) {
+  if (deleteButton[i]) {
+    deleteButton[i].addEventListener('click', (e) => {
+      const { parentNode } = e.target.parentNode;
+      const { id } = parentNode.querySelector('.status');
+      parentNode.style.display = 'none';
+      newTodo.removeTodo(id);
+    });
+  }
+}
+
+const handleReload = () => {
+  window.location.reload();
+};
+
+refreshButton.addEventListener('click', handleReload);

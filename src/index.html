@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
-</head>
-<body>
-    <form class="to-do-container">
-        <div class="top">
-            <h1>Today's To Do List</h1>
-            <button class="btn btn-refresh">
-                <i class="bi bi-arrow-repeat"></i>
-              </button>
-        </div>
-        <hr>
-        <input class="form-input" type="text" placeholder="Add to your List...">
-        <ul class="to-do-list">
-        </ul>
-        <button class="clr-btn" type="button"> Clear all Completed</button>
-    </form>
-</body>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="todo-lists">
+      <div class="todo-header">
+        <h2 class="todo-list-title">To Do List</h2>
+        <button class="btn btn-refresh">
+          <i class="bi bi-arrow-repeat"></i>
+        </button>
+      </div>
+      <form >
+        <input type="text" id="todo-input" placeholder="Add to your list" />
+      </form>
+
+      <div class="todo-lists-holder"></div>
+
+      <button class="btn btn-clear" type="button">Clear all completed</button>
+    </div>
+  </body>
 </html>

@@ -1,102 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-body {
-  text-align: center;
+* {
   margin: 0;
-}
-
-hr {
-  width: 100%;
-  margin: 0;
-}
-
-.to-do-container {
-  margin: 10px auto;
-  width: 40%;
-  text-align: left;
-  background-color: #fff;
-  box-shadow: 10px 10px 10px 10px #888;
-}
-
-.to-do-container h1 {
-  text-align: left;
-  margin-left: 40px;
-  padding: 20px 0;
-}
-
-.form-input {
-  text-align: left;
-  margin: 20px 40px 0;
-  height: 80px;
-  width: 70%;
-  font-size: x-large;
   padding: 0;
-  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Lato, serif;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+}
+
+.todo-lists {
+  margin: 5rem auto;
+  padding: 2rem;
+  box-shadow: 5px 5px 5px 5px #bfcaca;
+  width: 35%;
+}
+
+@media screen and (max-width: 768px) {
+  .todo-lists {
+    width: 80%;
+  }
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 0.5px solid #bfcaca;
+}
+
+.todo-list-title {
+  font-size: 2rem;
+}
+
+.bi {
+  font-size: 2.8rem;
+  color: #555;
+}
+
+#todo-input {
+  padding: 2rem 1rem;
   border: none;
   outline: none;
+  font-size: 1.4rem;
   font-style: italic;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-.to-do-container ul {
-  list-style: none;
-  text-align: left;
-  margin: 10px 0 0;
-  padding: 10px;
-}
-
-.items {
-  margin: 30px;
-  font-size: x-large;
-  font-weight: 800;
-  min-width: 30vw;
-}
-
-.clr-btn {
-  width: 100%;
-  height: 70px;
-  font-size: xx-large;
-  font-weight: 700;
-}
-
-.inner-items {
+.todo-list-row {
   display: flex;
-  flex-direction: row;
   align-items: center;
-}
-
-.inner-input {
-  width: 25px;
-  height: 25px;
-}
-
-.item-img {
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-}
-
-.btn-refresh {
-  margin-right: 1.5vw;
-  width: 50px;
-  height: 50px;
-  background: none;
-  border: none;
-}
-
-.bi-trash {
-  display: none;
-}
-
-.top {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  border-top: 0.5px solid #bfcaca;
+  padding: 1rem;
+}
+
+.todo-list-row:hover,
+.todo-list-row:active {
+  background: rgb(231, 231, 228);
+}
+
+.todo-left {
+  display: flex;
   align-items: center;
 }
 
@@ -104,4 +81,38 @@ ul {
   text-decoration: line-through;
   font-style: italic;
   color: rgb(28, 28, 77);
+}
+
+.description {
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.todo-list-holder button {
+  align-self: flex-end;
+}
+
+.btn {
+  outline: none;
+  width: auto;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.btn-delete {
+  display: none;
+}
+
+.btn-clear {
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: 400;
+  border-top: 0.5px solid #bfcaca;
+  padding-top: 2rem;
+  color: #555;
+}
+
+.row-bg {
+  background: rgb(226, 223, 197);
 }
