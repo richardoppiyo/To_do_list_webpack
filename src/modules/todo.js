@@ -1,5 +1,5 @@
 import { myInput, todoList } from './elements.js';
-import appendTodoList from './appendToDoList.js';
+import appendTodoList from './appendToDo.js';
 
 class TODO {
   constructor() {
