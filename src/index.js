@@ -17,6 +17,7 @@ newTodo.renderPage();
 myInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && myInput.value !== '') {
     newTodo.addTodo();
+    console.log(newTodo);
     e.preventDefault();
     form.reset();
   }

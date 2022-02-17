@@ -12,7 +12,7 @@ class TODO {
   addTodo() {
     this.todos = this.readTodo();
     this.description = myInput.value;
-    this.index = this.todos.length;
+    this.index = this.todos.length + 1;
     this.todos.push({
       index: this.index,
       description: this.description,
