@@ -36,7 +36,6 @@ for (let i = 0; i < statusInput.length; i += 1) {
 
 for (let i = 0; i < editButton.length; i += 1) {
   editButton[i].addEventListener('click', (event) => {
-    console.log(event.target.parentNode)
     const { parentNode } = event.target.parentNode;
     const deleteButton = parentNode.getElementsByClassName('btn-delete')[0];
     const desc = parentNode.querySelector('.description');
