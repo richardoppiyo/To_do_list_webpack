@@ -18,7 +18,7 @@
 - npm ( Node Package Manager )
 - git and Github Account
 
-###Live Link.
+### Live Link
 Live Link: https://richardoppiyo.github.io/To_do_list_webpack/dist/
 
 ### Setup
