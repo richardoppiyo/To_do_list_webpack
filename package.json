@@ -3,7 +3,6 @@
   "description": "This is a to do list implemented using webpack",
   "version": "1.0.0",
   "private": true,
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch --mode development",
@@ -19,25 +18,26 @@
   "bugs": {
     "url": "https://github.com/richardoppiyo/To_do_list_webpack/issues"
   },
-  "homepage": "https://github.com/richardoppiyo/To_do_list_webpack#readme",
-   "devDependencies": {
-      "babel-eslint": "^10.1.0",
-      "css-loader": "^6.6.0",
-      "eslint": "^7.32.0",
-      "eslint-config-airbnb-base": "^14.2.1",
-      "eslint-plugin-import": "^2.25.4",
-      "hint": "^6.1.9",
-      "html-webpack-plugin": "^5.5.0",
-      "style-loader": "^3.3.1",
-      "stylelint": "^13.13.1",
-      "stylelint-config-standard": "^21.0.0",
-      "stylelint-csstree-validator": "^1.9.0",
-      "stylelint-scss": "^3.21.0",
-      "webpack": "^5.69.0",
-      "webpack-cli": "^4.9.2",
-      "webpack-dev-server": "^4.7.4"
-    },
+  "homepage": "https://github.com/richardoppiyo/To_do_list_webpack",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "hint": "^6.1.9",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.69.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
   "dependencies": {
-  "lodash": "^4.17.21"
-}
+    "gh-pages": "^3.2.3",
+    "lodash": "^4.17.21"
+  }
 }
