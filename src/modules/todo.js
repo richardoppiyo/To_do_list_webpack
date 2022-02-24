@@ -73,9 +73,7 @@ class TODO {
   renderPage() {
     todoList.innerHTML = '';
     this.todos = this.readTodo();
-    this.todos.forEach((task) => {
-      appendTodoList(task);
-    });
+    this.todos.forEach((task) => appendTodoList(task));
   }
 
   updateDescription(val, id) {

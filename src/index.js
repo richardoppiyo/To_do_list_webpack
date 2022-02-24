@@ -83,8 +83,6 @@ for (let i = 0; i < deleteButton.length; i += 1) {
   }
 }
 
-const handleReload = () => {
-  window.location.reload();
-};
+const handleReload = () => window.location.reload();
 
 refreshButton.addEventListener('click', handleReload);
