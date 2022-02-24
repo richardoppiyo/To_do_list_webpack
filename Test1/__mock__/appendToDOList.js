@@ -1,6 +1,6 @@
 const appendTodoList = (todoItem) => {
-  document.body.innerHTML = `
-  <div class = 'row-elements'>
+  const task = `
+  
   <div class="todo-left">
     <input type="checkbox" class="status" id = ${todoItem.index}  ${
   todoItem.completed ? 'checked' : ''
@@ -15,7 +15,14 @@ const appendTodoList = (todoItem) => {
   <button class="btn btn-delete">  
     <i class="bi bi-trash"></i>
   </button>
-  </div>`;
+`;
+
+  const div = document.createElement('div');
+  div.classList.add('todo-list-row');
+  div.innerHTML = task;
+const container = document.querySelector('.todo-lists-holder');
+console.log(div);
+container.appendChild(div);
 };
 
 module.exports = appendTodoList;
