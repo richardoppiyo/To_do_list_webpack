@@ -29,6 +29,9 @@ class TODO {
 
   removeTodo(id) {
     this.todos = this.todos.filter((todo) => todo.index !== Number(id));
+    const removeTask = document.getElementById(id);
+    const parentTask = removeTask.parentElement.parentElement;
+    parentTask.remove();
     this.arrangeIndex();
     this.storeTodo();
     return this.todos;

@@ -20,9 +20,8 @@ const appendTodoList = (todoItem) => {
   const div = document.createElement('div');
   div.classList.add('todo-list-row');
   div.innerHTML = task;
-const container = document.querySelector('.todo-lists-holder');
-console.log(div);
-container.appendChild(div);
+  const container = document.querySelector('.todo-lists-holder');
+  container.appendChild(div);
 };
 
 module.exports = appendTodoList;
