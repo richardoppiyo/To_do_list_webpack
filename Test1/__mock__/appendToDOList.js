@@ -4,10 +4,8 @@ const appendTodoList = (todoItem) => {
   <div class="todo-left">
     <input type="checkbox" class="status" id = ${todoItem.index}  ${
   todoItem.completed ? 'checked' : ''
-} />
-    <p class="description ${todoItem.completed ? 'strike-through' : ''}">${
-  todoItem.description
-}</p>
+} /><input class="description ${todoItem.completed ? 'strike-through' : ''}" 
+    value="${todoItem.description}" />
   </div>
   <button class="btn btn-edit">
     <i class="bi bi-three-dots-vertical"></i>
