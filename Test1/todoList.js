@@ -52,8 +52,8 @@ class TODO {
     this.todos[Number(id)].description = val;
     this.storeTodo();
     const updateDesc = document.getElementById(id);
-    const nextSibling = updateDesc.nextSibling;
-    nextSibling.value = val;
+    const nextSibling1 = updateDesc.nextSibling;
+    nextSibling1.value = val;
   }
 
   changeStatus(id, status) {
@@ -66,6 +66,21 @@ class TODO {
     } else {
       changeCompleted.setAttribute('checked', false);
     }
+  }
+
+  clearCompleted() {
+    this.todos = this.readTodo();
+    this.todos.forEach((item) => {
+      const elemName = document.getElementById(item.index);
+      if (elemName.hasAttribute('checked')) {
+        const removeTask = document.getElementById(item.index);
+        const parentTask = removeTask.parentElement.parentElement;
+        parentTask.remove();
+      }
+    });
+    this.todos = this.todos.filter((todo) => todo.completed !== true);
+    this.arrangeIndex();
+    this.storeTodo();
   }
 }
 
